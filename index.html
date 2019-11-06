@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice</title>
+</head>
+<body>
+  <form class="form">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Pig Dice</h1>
+        <br>
+        <h3 id="current-player-turn">Start the game!</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <label>Name:</label>
+            <input id="player1Name" class="form-control" type="text" name="player1" placeholder="Player 1">
+          </div>
+          <div class="col-md-4">
+            <label>Name:</label>
+            <input id="player2Name" class="form-control" type="text" name="player2" placeholder="Player 2">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary" value="start">Start</button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="card bg-light mb-3">
+          <div class="card-header">Player 1</div>
+          <div class="card-body">
+            <h5 class="card-title">Score:<span id="Player1TurnScore"></span></h5>
+            <p class="card-text" id="player-1-score">other text</p>
+            <button id="player-1-roll" class="btn btn-outline-primary">Roll</button>
+            <button id="player-1-hold" class="btn btn-outline-primary">Hold</button>
+            <p class="card-text" id="player-1-last-roll"></p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3">
+          <div class="card-header" id="player-2-score">Player 2</div>
+          <div class="card-body">
+            <h5 class="card-title">Score:<span id="Player2TurnScore"></span></h5>
+            <p class="card-text">other text</p>
+            <button id="player-2-roll" class="btn btn-outline-primary">Roll</button>
+            <button id="player-2-hold" class="btn btn-outline-primary">Hold</button>
+            <p class="card-text" id="player-2-last-roll"></p>
+          </div>
+        </div>
+      </div>
+      <button type="reset" class="btn btn-outline-primary" value="Reset" onClick="window.location.reload()">Play Again</button>
+    </div>
+  </form>
+
+
+</body>
+</html>
