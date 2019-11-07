@@ -13,10 +13,10 @@
       <div class="container">
         <h1>Pig Dice</h1>
         <br>
-        <h3 id="current-player-turn">Start the game!</h3>
+        <h3 id="current-player-turn">Let's Play!</h3>
       </div>
     </div>
-    <div class="container">
+    <div class="container name-form">
       <div class="form-group">
         <div class="row">
           <div class="col-md-4">
@@ -31,25 +31,31 @@
       </div>
       <button type="submit" class="btn btn-outline-primary" value="start">Start</button>
     </div>
-    <div class="container">
+    <div class="container gameBoard">
       <div class="row">
         <div class="card bg-light mb-3">
-          <div class="card-header">Player 1</div>
+          <div class="card-header">
+            <h2 id="player-1-name-display"></h2>
+            <h3 id="player-1-total-score"></h3>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Score:<span id="Player1TurnScore"></span></h5>
-            <p class="card-text" id="player-1-score">other text</p>
-            <button id="player-1-roll" class="btn btn-outline-primary">Roll</button>
-            <button id="player-1-hold" class="btn btn-outline-primary">Hold</button>
+            <h3 class="card-text" id="player-1-dice"></h3>
+            <h5 class="card-title">Roll Score: <span id="player1TurnScore"></span></h5>
+            <button type="button" id="player-1-roll" class="btn btn-outline-primary">Roll</button>
+            <button type="button" id="player-1-hold" class="btn btn-outline-primary">Hold</button>
             <p class="card-text" id="player-1-last-roll"></p>
           </div>
         </div>
         <div class="card bg-light mb-3">
-          <div class="card-header" id="player-2-score">Player 2</div>
+          <div class="card-header">
+            <h2 id="player-2-name-display"></h2>
+            <h3 id="player-2-total-score"></h3>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Score:<span id="Player2TurnScore"></span></h5>
-            <p class="card-text">other text</p>
-            <button id="player-2-roll" class="btn btn-outline-primary">Roll</button>
-            <button id="player-2-hold" class="btn btn-outline-primary">Hold</button>
+            <h3 class="card-text" id="player-2-dice"></h3>
+            <h5 class="card-title">Roll Score: <span id="player2TurnScore"></span></h5>
+            <button type="button" id="player-2-roll" class="btn btn-outline-primary">Roll</button>
+            <button type="button" id="player-2-hold" class="btn btn-outline-primary">Hold</button>
             <p class="card-text" id="player-2-last-roll"></p>
           </div>
         </div>
