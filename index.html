@@ -33,7 +33,7 @@
     </div>
     <div class="container gameBoard">
       <div class="row">
-        <div class="card bg-light mb-3">
+        <div class="card bg-primary text-white card-player1">
           <div class="card-header">
             <h2 id="player-1-name-display"></h2>
             <h3 id="player-1-total-score"></h3>
@@ -41,12 +41,12 @@
           <div class="card-body">
             <h3 class="card-text" id="player-1-dice"></h3>
             <h5 class="card-title">Roll Score: <span id="player1TurnScore"></span></h5>
-            <button type="button" id="player-1-roll" class="btn btn-outline-primary">Roll</button>
-            <button type="button" id="player-1-hold" class="btn btn-outline-primary">Hold</button>
+            <button type="button" id="player-1-roll" class="btn btn-success"">Roll</button>
+            <button type="button" id="player-1-hold" class="btn btn-warning">Hold</button>
             <p class="card-text" id="player-1-last-roll"></p>
           </div>
         </div>
-        <div class="card bg-light mb-3">
+        <div class="card card-player2">
           <div class="card-header">
             <h2 id="player-2-name-display"></h2>
             <h3 id="player-2-total-score"></h3>
@@ -54,13 +54,13 @@
           <div class="card-body">
             <h3 class="card-text" id="player-2-dice"></h3>
             <h5 class="card-title">Roll Score: <span id="player2TurnScore"></span></h5>
-            <button type="button" id="player-2-roll" class="btn btn-outline-primary">Roll</button>
-            <button type="button" id="player-2-hold" class="btn btn-outline-primary">Hold</button>
+            <button type="button" id="player-2-roll" class="btn btn btn-success">Roll</button>
+            <button type="button" id="player-2-hold" class="btn btn-warning">Hold</button>
             <p class="card-text" id="player-2-last-roll"></p>
           </div>
         </div>
       </div>
-      <button type="reset" class="btn btn-outline-primary" value="Reset" onClick="window.location.reload()">Play Again</button>
+      <button type="reset" class="btn btn-outline-primary reset" value="Reset" onClick="window.location.reload()">Play Again</button>
     </div>
   </form>
 

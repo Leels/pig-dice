@@ -15,13 +15,17 @@ var diceRoll = function() {
 Player.prototype.rollsOne = function() {
   if (this.roll ===1) {
     this.turnScore = 0;
-    alert("Sorry...");
+    alert("You rolled a one which is a major bummer!");
     if (player1.turn === false) {
       player1.turn = true;
       player2.turn = false;
+      $(".card-player1").addClass("bg-primary text-white");
+      $(".card-player2").removeClass("bg-danger text-white");
     } else {
       player1.turn = false;
       player2.turn = true;
+      $(".card-player1").removeClass("bg-primary text-white");
+      $(".card-player2").addClass("bg-danger text-white");
     }
   } else {
      this.turnScore += this.roll;
@@ -30,7 +34,7 @@ Player.prototype.rollsOne = function() {
 }
 
 Player.prototype.hold = function() {
-  alert("Next player's turn");
+  alert("Hold. Next player's turn.");
   this.totalScore += this.turnScore;
   this.turnScore = 0;
 }
@@ -69,6 +73,8 @@ $(document).ready(function() {
     $("#player-1-hold").click(function(){
       if (player1.turn === true) {
         player1.hold();
+        $(".card-player1").removeClass("bg-primary text-white");
+        $(".card-player2").addClass("bg-danger text-white");
         $("#player-1-total-score").text(player1.totalScore);
         $("#player-1-dice").text("");
         $("#player1TurnScore").text("");
@@ -90,6 +96,8 @@ $(document).ready(function() {
     $("#player-2-hold").click(function(){
       if (player2.turn === true) {
         player2.hold();
+        $(".card-player1").addClass("bg-primary text-white");
+        $(".card-player2").removeClass("bg-danger text-white");
         $("#player-2-total-score").text(player2.totalScore);
         $("#player-2-dice").text("");
         $("#player2TurnScore").text("");
@@ -98,9 +106,13 @@ $(document).ready(function() {
       }
     })
 
-    if (player1.turn === true) {
-      $(".card").addClass("bg-info");
-    }
+    // if (player1.turn === true) {
+    //   $(".card-player1").toggleClass("bg-primary text-white", true);
+    //   $(".card-player2").toggleClass("bg-danger text-white", false);
+    // } else {
+    //   $(".card-player1").removeClass("bg-primary text-white");
+    //   $(".card-player2").addClass("bg-danger text-white");
+    // };
 
       $(".gameBoard").show();
       $(".name-form").hide();
